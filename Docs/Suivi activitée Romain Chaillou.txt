@@ -2,3 +2,6 @@
 
 Début de projet
 Création du compte GitHub
+Prise de connaissance sur l'afficheur
+Création d'un fichier avec les informations importante sur le projet
+Compréhension d'un bout de programme donner par monsieur Angibaud
