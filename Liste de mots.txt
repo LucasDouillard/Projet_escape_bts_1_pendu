@@ -1,0 +1,27 @@
+bug
+compilateur
+disque dur
+ethernet
+firewall
+freeware
+open source
+hardware
+software
+html
+java
+python
+javascript
+bit
+octet
+memoire
+modem
+programme
+ordinateur
+sonde
+ping
+pixel
+port
+processeur
+resolution
+sata
+serveur
