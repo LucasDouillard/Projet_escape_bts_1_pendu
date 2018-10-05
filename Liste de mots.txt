@@ -1,17 +1,13 @@
-bug
 compilateur
 disque dur
 ethernet
 firewall
-freeware
-open source
 hardware
 software
 html
 java
 python
 javascript
-bit
 octet
 memoire
 modem
@@ -23,5 +19,17 @@ pixel
 port
 processeur
 resolution
-sata
 serveur
+clavier
+variable
+algorithme
+systeme
+ecran
+souris
+reseau
+internet
+wifi
+windows
+linux
+projet
+stage
