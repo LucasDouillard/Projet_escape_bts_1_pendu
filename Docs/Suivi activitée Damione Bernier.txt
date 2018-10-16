@@ -6,3 +6,7 @@ ajout d'un projet QT avec l'exemple donner par M.Angibaud
 16/10/2018
 
 Création d'un programme pendu qui donnera un mots alétoire parmis la liste.
+
+rencontre d'un problème liée a "use of deleted function"
+Problème régler suite à un peu de recherche (ifstream est unique et ne pouvait être pris en paramètre de fonction)
+ifstream se déclare maintenant dans la fonction.
