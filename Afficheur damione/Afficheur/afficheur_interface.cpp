@@ -69,8 +69,8 @@ bool AfficheurInterface::connexionEtablie() const
  */
 void AfficheurInterface::envoyerMessage( const MessageClient & m)
 {
-   // MessageClient m1(m.numero(),"AFFICHER");
-    //m1.setParametre(0, "hé hé !!!");
+   MessageClient m1(m.numero(),"AFFICHER");
+    m1.setParametre(0, "hé hé !!!");
 
     if ( connexionEtablie() )
     {
