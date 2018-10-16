@@ -1,4 +1,8 @@
-05/10/2018
+﻿05/10/2018
 
 Création d'un dictionnaire de mots en lien avec la section
 ajout d'un projet QT avec l'exemple donner par M.Angibaud
+
+16/10/2018
+
+Création d'un programme pendu qui donnera un mots alétoire parmis la liste.
