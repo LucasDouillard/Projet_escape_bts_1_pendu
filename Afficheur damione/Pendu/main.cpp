@@ -9,6 +9,8 @@ using namespace std;
 
 std::vector<std::string> lectureFichier()
 {
+    //ifstream donne le fichier à lire
+
     ifstream a("Liste de mots.txt");
     string b;
     vector<string>c;
@@ -36,34 +38,44 @@ string motAlea(vector<string> a)
     int random = rand() % a.size();
 
     string mot = a[random];
-    cout<<random<<"\n";
+    cout<<random+1<<"\n";
     return mot;
 }
 
-//void Affichage()
-//{
-//    for
-//}
 
 int main()
 {
     //Le vector permetra de stocker chaque mots
-    //ifstream donne le fichier à lire
     //Le string mot sera le mot a stocker
 
 
-    string motMystere;
+    char lettre;
+    string mot;
 
     vector<string>Liste = lectureFichier();
-
-
-
+    ;
 
     //La méthode motAlea prend le vector en parametre
     //elle va effectuer le choix du mot aleatoire
 
-    motMystere = motAlea(Liste);
-    cout<<motMystere<<"\n";
+    mot = motAlea(Liste);
+    vector<char>motAdeviner(mot.begin(),mot.end());
+    vector<char>motMontrer;
 
+    cout<<mot<<"\n";
+
+    cout<<"entrer une lettre\n";
+    cin>>lettre;
+
+
+    for (int i = 0; i < motAdeviner.size(); i++)
+    {
+        if ()
+        if (lettre == motAdeviner[i])
+        {
+
+            cout<<motAdeviner[i]<<"\n";
+        }
+    }
 
 }
