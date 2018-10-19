@@ -10,3 +10,8 @@ Compréhension d'un bout de programme donner par monsieur Angibaud
 
 Prise en main du programme
 Début de création du nouveau programme
+
+19/10/2018
+
+Avancement sur le programme
+Néanmoins problème sur le code qui bloque l'avancement
