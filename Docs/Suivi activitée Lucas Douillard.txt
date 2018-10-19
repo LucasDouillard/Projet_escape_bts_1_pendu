@@ -8,3 +8,7 @@ Compréhension de l'exemple du programme
 
 Test de programme pour l'affichage
 
+19/10/2018 
+
+Erreur : Impossible de faire fonctionner l'aafficheur avec le programme donné
+
