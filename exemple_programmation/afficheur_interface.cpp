@@ -4,7 +4,7 @@
  */
 
 #include "afficheur_interface.h"
-#include "message_client.h"
+
 
 #include <iostream>
 #include <sstream>
@@ -12,6 +12,7 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <windows.h>
+#include <QtSerialPort/QSerialPort>
 
 // Initialisation de la variable membre statique
 AfficheurInterface* AfficheurInterface::m_instance = NULL;
@@ -20,17 +21,19 @@ AfficheurInterface* AfficheurInterface::m_instance = NULL;
  * \brief Constructeur de la classe AfficheurInterface.
  */
 AfficheurInterface::AfficheurInterface()
-    : m_couleur('E')
 {
     // Paramétrage du port série
-    m_portSerie.setPortName("COM1");
+    m_portSerie.setPortName("COM5");
     m_portSerie.setBaudRate(QSerialPort::Baud9600);
     m_portSerie.setDataBits(QSerialPort::Data8);
     m_portSerie.setParity(QSerialPort::NoParity);
     m_portSerie.setStopBits(QSerialPort::OneStop);
-
+    m_couleur = 'A';
+    AfficheurInterface::message = "coucou";
     // Ouverture du port série
     m_portSerie.open(QIODevice::ReadWrite);
+
+
 }
 
 /** --------------------------------------------------------------------------------------
@@ -67,16 +70,17 @@ bool AfficheurInterface::connexionEtablie() const
  * \brief Envoie un message à l'afficheur.
  * \param m Une référence constance sur le message à envoyer.
  */
-void AfficheurInterface::envoyerMessage( const MessageClient & m)
+void AfficheurInterface::envoyerMessage( std::string message)
 {
-   // MessageClient m1(m.numero(),"AFFICHER");
+   //MessageClient m1(m.numero(),"AFFICHER");
     //m1.setParametre(0, "hé hé !!!");
 
     if ( connexionEtablie() )
     {
         std::string startOfTrame = "<ID01>";
         std::string startOfMessage = "<L1><PA><FE><MA><WC><FE>";
-        std::string mess = startOfMessage + "<C" + m_couleur + ">" + m.parametre(0).toStdString();
+        std::string mess = startOfMessage + "<C" + m_couleur + ">" + message;
+        std::cout <<mess <<std::endl;
 
         int checkSum = calculerChecksum(mess.c_str());
         std::string endOfTrame = "<E>";
@@ -109,21 +113,22 @@ void AfficheurInterface::envoyerMessage( const MessageClient & m)
  * \param m Une référence constance sur le message à envoyer.
  * \return \b Vrai si le choix est effectué, \b Faux sinon.
  */
-bool AfficheurInterface::setCouleur(const MessageClient &m)
-{
-    if ( m.a_parametre() )
-        if ( m.parametre().size() == 1 )
-        {
-            char couleur = m.parametre().at(0).toLatin1();
-            if ( couleur >= 'A' && couleur <= 'S' && couleur != 'O' )
-            {
-                m_couleur = couleur;
-                return true;
-            }
-        }
+//bool AfficheurInterface::setCouleur(const MessageClient &m)
+//{
+//    if ( m.a_parametre() )
+//        if ( m.parametre().size() == 1 )
+//        {
+//            char couleur = m.parametre().at(0).toLatin1();
+//            if ( couleur >= 'A' && couleur <= 'S' && couleur != 'O' )
+//            {
+//                m_couleur = couleur;
+//                return true;
+//            }
+//        }
 
-    return false;
-}
+//    return false;
+//}
+
 
 /** --------------------------------------------------------------------------------------
  * \brief Calcul du checksum d'une trame donnée. Le checksum est un simple xor.
