@@ -9,7 +9,6 @@
 
 #include <QtSerialPort/QSerialPort>
 
-class MessageClient;
 
 /**
  * \class AfficheurInterface
@@ -26,14 +25,16 @@ class AfficheurInterface
 
     public:
         static AfficheurInterface* instance();
-        void envoyerMessage(const MessageClient& m);
-        bool setCouleur( const MessageClient &m );
+        void envoyerMessage(std::string);
+        bool setCouleur();
         bool connexionEtablie() const;
+        std::string message;
 
     private:
         int calculerChecksum(const char* trame) const;
 
     private:
+
         /** \brief Pointeur sur l'instance singleton AfficheurInterface. */
         static AfficheurInterface* m_instance;
 
@@ -45,3 +46,4 @@ class AfficheurInterface
 };
 
 #endif // AFFICHEURINTERFACE_H
+
