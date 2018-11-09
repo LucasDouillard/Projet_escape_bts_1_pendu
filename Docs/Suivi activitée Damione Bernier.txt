@@ -17,3 +17,5 @@ Ajout d'une partie qui permet de demander une lettre et d'afficher le mots(WIP)
 
 09/11/2018
 
+Transposition du travail effectuer sur une classe pendu.
+
