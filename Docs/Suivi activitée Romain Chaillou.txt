@@ -15,3 +15,9 @@ Début de création du nouveau programme
 
 Avancement sur le programme
 Néanmoins problème sur le code qui bloque l'avancement
+
+09/11/2018
+
+Débogage et réglage des problème
+
+Objectif prochaine séance: Gérer les entrées claviers de l'utilisateur
