@@ -28,7 +28,6 @@ std::vector<std::string> lectureFichier()
     {
         c.push_back(b);
     }
-
     return c;
 }
 
@@ -41,7 +40,6 @@ string motAlea(vector<string> a)
     cout<<random+1<<"\n";
     return mot;
 }
-
 
 int main()
 {
@@ -64,18 +62,16 @@ int main()
 
     cout<<mot<<"\n";
 
-    cout<<"entrer une lettre\n";
-    cin>>lettre;
+//    cout<<"entrer une lettre\n";
+//    cin>>lettre;
 
-
-    for (int i = 0; i < motAdeviner.size(); i++)
-    {
-        if ()
-        if (lettre == motAdeviner[i])
-        {
-
-            cout<<motAdeviner[i]<<"\n";
-        }
-    }
+//    for (int i = 0; i < motAdeviner.size(); i++)
+//    {
+//        if ()
+//            if (lettre == motAdeviner[i])
+//            {
+//                cout<<motAdeviner[i]<<"\n";
+//            }
+//    }
 
 }
