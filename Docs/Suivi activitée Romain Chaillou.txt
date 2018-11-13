@@ -1,7 +1,23 @@
 05/10/2018 :
 
-D�but de projet
-Cr�ation du compte GitHub
+Début de projet
+Création du compte GitHub
 Prise de connaissance sur l'afficheur
-Cr�ation d'un fichier avec les informations importante sur le projet
-Compr�hension d'un bout de programme donner par monsieur Angibaud
+Création d'un fichier avec les informations importante sur le projet
+Compréhension d'un bout de programme donner par monsieur Angibaud
+
+16/10/2018
+
+Prise en main du programme
+Début de création du nouveau programme
+
+19/10/2018
+
+Avancement sur le programme
+Néanmoins problème sur le code qui bloque l'avancement
+
+09/11/2018
+
+Débogage et réglage des problème
+
+Objectif prochaine séance: Gérer les entrées claviers de l'utilisateur
