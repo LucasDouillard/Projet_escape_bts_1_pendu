@@ -6,5 +6,7 @@
 int main()
 {
 
-Pendu::Partie;
+Pendu partie;
+partie.Partie();
+
 }

@@ -1,23 +1,21 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <vector>
-#include <time.h>
 #include "pendu.h"
 
-Pendu::Pendu(string mot)
+
+using namespace std;
+
+void Pendu::motCacher(string mot)
 {
     this->motADeviner = mot;
     this->motCache = "";
 
     for(int i=0; i<mot.length(); i++) this->motCache += "*";
 
-    this->nbreEssais = 0;
+    this->nbreEssais = 9;
 }
 
-using namespace std;
 
-vector<string> lectureFichier()
+
+vector<string> Pendu::lectureFichier()
 {
     //ifstream donne le fichier à lire
 
@@ -41,7 +39,7 @@ vector<string> lectureFichier()
     return c;
 }
 
-string motAlea(vector<string> a)
+string Pendu::motAlea(vector<string> a)
 {
     srand(time(NULL));
     int random = rand() % a.size();
@@ -51,7 +49,7 @@ string motAlea(vector<string> a)
     return mot;
 }
 
-bool checkChance(char a,string b)
+bool Pendu::checkChance(char a,string b)
 {
 
     bool estPresent = false;
@@ -64,7 +62,7 @@ bool checkChance(char a,string b)
     return estPresent;
 }
 
-Pendu::Partie()
+void Pendu::Partie()
 {
     //Le vector permetra de stocker chaque mots
     //Le string mot sera le mot a stocker
@@ -76,7 +74,6 @@ Pendu::Partie()
 
     char lettre;
     string mot;
-    int chance = 9;
     bool estPresent;
 
     vector<string>Liste = lectureFichier();
@@ -86,7 +83,7 @@ Pendu::Partie()
     //elle va effectuer le choix du mot aleatoire
 
 
-    Pendu P(mot = motAlea(Liste));
+    motCacher(mot = motAlea(Liste));
 
     //    vector<char>motAdeviner(mot.begin(),mot.end());
     //    vector<char>motMontrer (motAdeviner.size(),'*');
@@ -97,27 +94,27 @@ Pendu::Partie()
         cout<<"entrer une lettre : ";
         cin>>lettre;
 
-        estPresent = checkChance(lettre,P.motADeviner);
+        estPresent = checkChance(lettre,motADeviner);
 
-        for (int i = 0; i < P.motADeviner.size(); i++)
+        for (int i = 0; i < motADeviner.size(); i++)
         {
-            if (lettre != P.motADeviner[i])
+            if (lettre != motADeviner[i])
             {
-                cout<<P.motCache[i];
+                cout<<motCache[i];
             }
-            if (lettre == P.motADeviner[i])
+            if (lettre == motADeviner[i])
             {
-                P.motCache[i] = P.motADeviner[i];
-                cout<<P.motCache[i];
+                motCache[i] = motADeviner[i];
+                cout<<motCache[i];
             }
 
         }
 
-        if (estPresent==false)chance--;
+        if (estPresent==false)nbreEssais--;
 
-        cout<<"\nIl vous reste "<<chance<<" chance\n";
+        cout<<"\nIl vous reste "<<nbreEssais<<" chance\n";
 
         //if (motMontrer == motAdeviner)
 
-    }while (chance >= 0);
+    }while (nbreEssais >= 0);
 }

@@ -2,7 +2,12 @@
 #define PENDU_H
 
 #include <string>
-#include <pendu.cpp>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <time.h>
+
 
 using namespace std;
 
@@ -14,11 +19,12 @@ private:
     int nbreEssais; // à 0 au départ
 
 public:
-    Pendu(string mot);
-    Partie();
+      void motCacher(string mot);
+
+    void Partie();
     vector<string> lectureFichier();
     string motAlea(vector<string>);
-    bool checkChance(char a,string b);
+    bool checkChance(char,string);
 };
 
 #endif // PENDU_H
