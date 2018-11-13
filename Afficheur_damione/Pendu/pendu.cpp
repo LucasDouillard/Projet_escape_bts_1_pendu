@@ -1,6 +1,7 @@
 #include "pendu.h"
 
 
+
 using namespace std;
 
 void Pendu::motCacher(string mot)
@@ -19,7 +20,7 @@ vector<string> Pendu::lectureFichier()
 {
     //ifstream donne le fichier à lire
 
-    ifstream a("Liste de mots.txt");
+    ifstream a("Liste_de_mots.txt", std::ifstream::in);
     string b;
     vector<string>c;
     //Vérification de la présence du fichier

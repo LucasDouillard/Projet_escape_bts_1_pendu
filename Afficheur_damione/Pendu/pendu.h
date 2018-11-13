@@ -16,7 +16,7 @@ class Pendu
 private:
     string motADeviner; // par exemple : "tortue"
     string motCache; // par exemple : "******"
-    int nbreEssais; // à 0 au départ
+    int nbreEssais; // à 9 au départ
 
 public:
       void motCacher(string mot);
