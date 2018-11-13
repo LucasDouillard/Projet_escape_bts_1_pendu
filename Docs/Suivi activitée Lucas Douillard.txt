@@ -8,3 +8,13 @@ Compréhension de l'exemple du programme
 
 Test de programme pour l'affichage
 
+19/10/2018 
+
+Erreur : Impossible de faire fonctionner l'aafficheur avec le programme donné
+
+
+09/11/2018
+
+Test du programme fini, le programme fonctionne avec 
+Initialisatoin de l'interface de l'afficheur du pendu presque terminée
+
