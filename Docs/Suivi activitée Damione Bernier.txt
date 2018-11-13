@@ -6,3 +6,8 @@ ajout d'un projet QT avec l'exemple donner par M.Angibaud
 16/10/2018
 
 Création d'un programme pendu qui donnera un mots alétoire parmis la liste.
+
+09/11/2018
+
+Test du programme fini, le programme fonctionne avec 
+Initialisatoin de l'interface de l'afficheur du pendu presque terminée

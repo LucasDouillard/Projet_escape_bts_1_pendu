@@ -4,3 +4,7 @@ Documentation notice Afficheur
 Instalation et test du logiciel 
 Compréhension de l'exemple du programme
 
+16/10/2018
+
+Test de programme pour l'affichage
+
