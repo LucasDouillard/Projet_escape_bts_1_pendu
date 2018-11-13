@@ -22,3 +22,10 @@ Initialisatoin de l'interface de l'afficheur du pendu presque terminée
 
 Test de programme pour l'affichage
 
+13/11/2018 
+
+Initialisation de l' afficheur 
+afficher le mot du pendu
+definition des transition et de la couleur ainsi que le taux de rafraichissement
+afficher nombre d'erreurs
+
