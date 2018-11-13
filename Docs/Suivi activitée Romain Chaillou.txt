@@ -18,6 +18,11 @@ Néanmoins problème sur le code qui bloque l'avancement
 
 09/11/2018
 
-Débogage et réglage des problème
-
+Débogage et réglage des problèmes
 Objectif prochaine séance: Gérer les entrées claviers de l'utilisateur
+
+13/11/2018
+
+Gestion de l'entrée clavier
+Création du message envoyé à l'afficheur
+Objectif prochaine séance: Finalisé le programme en créant une interface plus adapter et plus compréhensible pour l'utilisateur
