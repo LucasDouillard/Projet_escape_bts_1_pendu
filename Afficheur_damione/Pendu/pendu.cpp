@@ -101,7 +101,7 @@ void Pendu::Partie()
 
 
         listLettre.push_back(lettre);
-        cout<<listLettre<<endl<<endl;
+        cout<<endl<<listLettre<<endl<<endl;
 
         estPresent = checkChance(lettre,motADeviner);
 

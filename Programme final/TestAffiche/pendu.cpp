@@ -4,6 +4,10 @@
 
 using namespace std;
 
+/** \brief Méthode prenant en paramètre mot et permettant de définir la longueur du motCacher
+ * \author BERNIER Damione
+ */
+
 void Pendu::motCacher(string mot)
 {
     this->motADeviner = mot;
@@ -15,6 +19,9 @@ void Pendu::motCacher(string mot)
 }
 
 
+/** \brief Méthode qui lit le fichier donner et vérifie sa présence
+ * \author BERNIER Damione
+ */
 
 vector<string> Pendu::lectureFichier()
 {
@@ -23,6 +30,7 @@ vector<string> Pendu::lectureFichier()
     ifstream a("Liste_de_mots.txt", std::ifstream::in);
     string b;
     vector<string>c;
+
     //Vérification de la présence du fichier
 
     if(!a)
@@ -40,6 +48,11 @@ vector<string> Pendu::lectureFichier()
     return c;
 }
 
+
+/** \brief Méthode qui choisi un mot aléatoirement uneune liste
+ * \author BERNIER Damione
+ */
+
 string Pendu::motAlea(vector<string> a)
 {
     srand(time(NULL));
@@ -49,6 +62,10 @@ string Pendu::motAlea(vector<string> a)
     cout<<random+1<<"\n";
     return mot;
 }
+
+/** \brief Méthode qui choisi un mot aléatoirement uneune liste
+ * \author BERNIER Damione
+ */
 
 bool Pendu::checkChance(char a,string b)
 {
@@ -85,17 +102,24 @@ void Pendu::Partie()
 
 
     motCacher(mot = motAlea(Liste));
+
     int nombre_espace;
     string motespace;
-    cout<<mot<<"\n";
     string motAffiche;
+
+    cout<<mot<<"\n";
+
     nombre_espace=12-motCache.length();
-    for(int i=0;nombre_espace>i;i++){
+
+    for(int i=0;nombre_espace>i;i++)
+    {
         motespace += " ";
     }
+
     motAffiche = motCache + motespace + "9";
 
     AfficheurInterface* afficheur = AfficheurInterface::instance();
+
     afficheur->envoyerMessage(motAffiche);
 
 
