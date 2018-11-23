@@ -26,3 +26,9 @@ Objectif prochaine séance: Gérer les entrées claviers de l'utilisateur
 Gestion de l'entrée clavier
 Création du message envoyé à l'afficheur
 Objectif prochaine séance: Finalisé le programme en créant une interface plus adapter et plus compréhensible pour l'utilisateur
+
+23/11/2018
+
+Modification de l'entrée clavier pour que l'utilisateur n'est pas a appuyer sur entré a chaque nouveau charactère.
+Création d'une feuille explicative de l'énigme pour l'utilisateur
+Objectif prochaine séance : Envoyer le message au serveur, empécher l'utilisateur de toucher à des touches inutiles.
