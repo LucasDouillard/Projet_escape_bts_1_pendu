@@ -6,10 +6,15 @@ using namespace std;
 
 void Pendu::motCacher(string mot)
 {
+    int a;
     this->motADeviner = mot;
     this->motCache = "";
+    11-mot.length()=a;
+    for(int i=0; i<mot.length(); i++)
+        this->motCache += "_";
+    for(int i=mot.length();i<a;i++)
+        this->motCache += " ";
 
-    for(int i=0; i<mot.length(); i++) this->motCache += "*";
 
     this->nbreEssais = 9;
 }
@@ -46,7 +51,6 @@ string Pendu::motAlea(vector<string> a)
     int random = rand() % a.size();
 
     string mot = a[random];
-    cout<<random+1<<"\n";
     return mot;
 }
 
@@ -89,7 +93,8 @@ void Pendu::Partie()
     //    vector<char>motAdeviner(mot.begin(),mot.end());
     //    vector<char>motMontrer (motAdeviner.size(),'*');
 
-    cout<<mot<<"\n";
+    cout<<motADeviner<<endl;
+
 
     do{
         cout<<"entrer une lettre : ";
@@ -115,7 +120,13 @@ void Pendu::Partie()
 
         cout<<"\nIl vous reste "<<nbreEssais<<" chance\n";
 
-        //if (motMontrer == motAdeviner)
+        if (motCache == motADeviner)
+        {
+            cout<<"Bravo vous avez gagner\n";
+            Partie();
+        }
 
-    }while (nbreEssais >= 0);
+    }while (nbreEssais > 0);
+    cout<<"Vous avez perdu";
+    Partie();
 }
