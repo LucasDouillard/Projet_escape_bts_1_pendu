@@ -9,12 +9,11 @@ void Pendu::motCacher(string mot)
     int a;
     this->motADeviner = mot;
     this->motCache = "";
-    11-mot.length()=a;
+    a = 11-mot.length();
     for(int i=0; i<mot.length(); i++)
         this->motCache += "_";
     for(int i=mot.length();i<a;i++)
         this->motCache += " ";
-
 
     this->nbreEssais = 9;
 }
@@ -99,6 +98,10 @@ void Pendu::Partie()
     do{
         cout<<"entrer une lettre : ";
         cin>>lettre;
+
+
+        listLettre.push_back(lettre);
+        cout<<listLettre<<endl<<endl;
 
         estPresent = checkChance(lettre,motADeviner);
 

@@ -17,9 +17,10 @@ private:
     string motADeviner; // par exemple : "tortue"
     string motCache; // par exemple : "******"
     int nbreEssais; // à 9 au départ
+    string listLettre; // La liste des lettre déjà proposer
 
 public:
-      void motCacher(string mot);
+    void motCacher(string mot);
 
     void Partie();
     vector<string> lectureFichier();
