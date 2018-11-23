@@ -1,0 +1,11 @@
+#ifndef ONTESTDESTRUCS_H
+#define ONTESTDESTRUCS_H
+
+
+class ONTESTDESTRUCS
+{
+public:
+    ONTESTDESTRUCS();
+};
+
+#endif // ONTESTDESTRUCS_H
