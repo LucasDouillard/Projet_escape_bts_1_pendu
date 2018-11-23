@@ -1,4 +1,4 @@
-05/10/2018
+﻿05/10/2018
 
 Documentation notice Afficheur
 Instalation et test du logiciel 
@@ -28,4 +28,11 @@ Initialisation de l' afficheur
 afficher le mot du pendu
 definition des transition et de la couleur ainsi que le taux de rafraichissement
 afficher nombre d'erreurs
+
+23/11/2018
+
+Changer la couleur du message en fonction du nombre d'erreur
+Message "defaite" si le nombre d'erreurs restante ateint 0
+Message "Victoire" si le mot mystère à été trouvé
+intégration de la lectrure clavier de Romain dans le programme principal
 

@@ -8,6 +8,7 @@
 #include <vector>
 #include <time.h>
 #include "afficheur_interface.h"
+#include <windows.h>
 
 
 using namespace std;

@@ -1,5 +1,5 @@
 #include "pendu.h"
-
+#include "conio.h"
 
 
 using namespace std;
@@ -89,8 +89,8 @@ void Pendu::Partie()
     //estPresent nous permet de savoir si
     //la lettre proposé est valide
 
-
-    char lettre;
+    string mDefaite("defaite");
+    string mVictoire("BRAVO !!!");
     string mot;
     bool estPresent;
 
@@ -106,6 +106,7 @@ void Pendu::Partie()
     int nombre_espace;
     string motespace;
     string motAffiche;
+
 
     cout<<mot<<"\n";
 
@@ -125,7 +126,7 @@ void Pendu::Partie()
 
     do{
         cout<<"entrer une lettre : ";
-        cin>>lettre;
+        char lettre = _getch(); /** La fonction getch() permet de ne pas avoir à sur entrer */
 
         estPresent = checkChance(lettre,motADeviner);
 
@@ -147,14 +148,30 @@ void Pendu::Partie()
 
         if (estPresent==false)nbreEssais--;
 
-        string s=to_string(nbreEssais);
-        char const * pchar = s.c_str();
-        motAffiche = motCache + motespace + pchar;
-        afficheur->envoyerMessage(motAffiche);
 
-        cout<<"\nIl vous reste "<<nbreEssais<<" chance\n";
+        motAffiche = motCache + motespace + to_string(nbreEssais);
+        if (nbreEssais == 0){
+            afficheur->envoyerMessage(mDefaite);
+            break;
+        }
+        else if (motCache == motADeviner){
+            afficheur->envoyerMessage(mVictoire);
+            break;
 
-        //if (motMontrer == motAdeviner)
+        }
 
-    }while (nbreEssais >= 0);
+
+        else{afficheur->envoyerMessage(motAffiche);
+
+            cout<<"\nIl vous reste "<<nbreEssais<<" chance\n";
+        }
+
+
+
+    }while (nbreEssais > 0);
+
+    Sleep(8000);
+
+
+    Partie();
 }
