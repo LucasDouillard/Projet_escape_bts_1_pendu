@@ -36,3 +36,7 @@ Message "defaite" si le nombre d'erreurs restante ateint 0
 Message "Victoire" si le mot mystère à été trouvé
 intégration de la lectrure clavier de Romain dans le programme principal
 
+27/11/2018
+
+Envoie du message au serveur grace à la classe client
+
