@@ -1,4 +1,0 @@
-#ifndef MESSAGE_CLIENT_H
-#define MESSAGE_CLIENT_H
-
-#endif // MESSAGE_CLIENT_H
