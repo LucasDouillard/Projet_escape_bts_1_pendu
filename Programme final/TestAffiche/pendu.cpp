@@ -1,5 +1,7 @@
 #include "pendu.h"
 #include "conio.h"
+#include "client.h"
+#include <QObject>
 
 
 using namespace std;
@@ -10,6 +12,7 @@ using namespace std;
 
 void Pendu::motCacher(string mot)
 {
+    c1 = NULL;
     this->motADeviner = mot;
     this->motCache = "";
 
@@ -125,53 +128,63 @@ void Pendu::Partie()
 
 
     do{
+
         cout<<"entrer une lettre : ";
         char lettre = _getch(); /** La fonction getch() permet de ne pas avoir à sur entrer */
 
-        estPresent = checkChance(lettre,motADeviner);
+        if (lettre == 'a' || lettre == 'b' || lettre == 'c' || lettre == 'd'
+                || lettre == 'e' || lettre == 'f' || lettre == 'g' || lettre == 'h' ||
+                lettre == 'i' || lettre == 'j' || lettre == 'k' || lettre == 'l' || lettre == 'm' ||
+                lettre == 'n' || lettre == 'o' || lettre == 'p' || lettre == 'q' || lettre == 'r'
+                || lettre == 's' || lettre == 't' || lettre == 'u' || lettre == 'v' || lettre == 'w'
+                || lettre =='x' || lettre == 'y' || lettre == 'z'){
+            estPresent = checkChance(lettre,motADeviner);
 
-        for (int i = 0; i < motADeviner.size(); i++)
-        {
-            if (lettre != motADeviner[i])
+            for (int i = 0; i < motADeviner.size(); i++)
             {
-                cout<<motCache[i];
+                if (lettre != motADeviner[i])
+                {
+                    cout<<motCache[i];
+
+                }
+                if (lettre == motADeviner[i])
+                {
+                    motCache[i] = motADeviner[i];
+                    cout<<motCache[i];
+                }
 
             }
-            if (lettre == motADeviner[i])
-            {
-                motCache[i] = motADeviner[i];
-                cout<<motCache[i];
+
+
+            if (estPresent==false)nbreEssais--;
+
+
+            motAffiche = motCache + motespace + to_string(nbreEssais);
+            if (nbreEssais == 0){
+                afficheur->envoyerMessage(mDefaite);
+                break;
+            }
+            else if (motCache == motADeviner){
+                afficheur->envoyerMessage(mVictoire);
+
+                Client * c = new Client();
+
+                break;
+
+            }
+
+            else{afficheur->envoyerMessage(motAffiche);
+
+                cout<<"\nIl vous reste "<<nbreEssais<<" chance\n";
             }
 
         }
-
-
-        if (estPresent==false)nbreEssais--;
-
-
-        motAffiche = motCache + motespace + to_string(nbreEssais);
-        if (nbreEssais == 0){
-            afficheur->envoyerMessage(mDefaite);
-            break;
-        }
-        else if (motCache == motADeviner){
-            afficheur->envoyerMessage(mVictoire);
-            break;
-
-        }
-
-
-        else{afficheur->envoyerMessage(motAffiche);
-
-            cout<<"\nIl vous reste "<<nbreEssais<<" chance\n";
-        }
-
-
 
     }while (nbreEssais > 0);
 
-    Sleep(8000);
+
+//Sleep(5000);
 
 
-    Partie();
+//Partie();
 }

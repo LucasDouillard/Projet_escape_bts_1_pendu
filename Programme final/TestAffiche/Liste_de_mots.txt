@@ -1,5 +1,4 @@
 compilateur
-disque dur
 ethernet
 firewall
 hardware

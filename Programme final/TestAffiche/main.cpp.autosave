@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
         QCoreApplication::processEvents();
     }
 
-    //return a.exec();
+    //return a.epixexec();
 
 }
 

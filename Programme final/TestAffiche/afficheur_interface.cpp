@@ -5,6 +5,7 @@
 
 #include "afficheur_interface.h"
 #include "pendu.h"
+#include "client.h"
 
 
 

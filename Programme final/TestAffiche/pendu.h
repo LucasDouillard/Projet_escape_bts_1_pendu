@@ -9,6 +9,7 @@
 #include <time.h>
 #include "afficheur_interface.h"
 #include <windows.h>
+#include "client.h"
 
 
 using namespace std;
@@ -27,6 +28,8 @@ public:
     vector<string> lectureFichier();
     string motAlea(vector<string>);
     bool checkChance(char,string);
+
+    Client * c1;
 };
 
 #endif // PENDU_H
