@@ -37,3 +37,8 @@ Objectif prochaine séance : Envoyer le message au serveur, empécher l'utilisat
 
 Gestion des entrées clavier pour qu'il n'y ai que les touches de l'alphabets qui soit valable
 Objectif prochaine séance : commenter le programme et finaliser la connexion au serveur (quelques bugs)
+
+11/12/2018
+
+Création du cahier de recette
+Projet terminé !
