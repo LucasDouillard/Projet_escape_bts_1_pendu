@@ -130,7 +130,7 @@ void Pendu::Partie()
     do{
 
         cout<<"entrer une lettre : ";
-        char lettre = _getch(); /** La fonction getch() permet de ne pas avoir à sur entrer */
+        char lettre = _getch(); /** La fonction getch() permet de ne pas avoir à appuyer sur entrer */
 
         if (lettre == 'a' || lettre == 'b' || lettre == 'c' || lettre == 'd'
                 || lettre == 'e' || lettre == 'f' || lettre == 'g' || lettre == 'h' ||
